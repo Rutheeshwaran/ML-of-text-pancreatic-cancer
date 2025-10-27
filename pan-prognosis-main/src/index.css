@@ -1,0 +1,313 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PancreaticAI Clinical Dashboard - Advanced Mobile Design System */
+
+@layer base {
+  :root {
+    /* Adaptive Background System - Light Mode */
+    --background: 210 100% 98%; /* soft blue-white background #F0F8FF */
+    --background-gradient: linear-gradient(
+      135deg,
+      hsl(210 100% 98%) 0%,
+      hsl(210 100% 94%) 50%,
+      hsl(210 100% 90%) 100%
+    );
+    --foreground: 215 28% 17%; /* deep navy text */
+
+    /* Card System for Medical Data */
+    --card: 0 0% 100%; /* pure white cards */
+    --card-foreground: 215 28% 17%;
+    --card-elevated: 0 0% 100%;
+    --card-shadow: 0 4px 6px -1px hsl(210 50% 15% / 0.1), 0 2px 4px -1px hsl(210 50% 15% / 0.06);
+
+    /* Primary - Medical Teal */
+    --primary: 180 100% 25%; /* #008080 calming teal */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 180 100% 35%;
+    --primary-glow: 180 100% 85%;
+
+    /* Secondary - Medical Blue */
+    --secondary: 207 90% 54%; /* #1E90FF medical blue */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 207 90% 64%;
+    --secondary-bg: 207 90% 97%;
+
+    /* Muted Clinical Backgrounds */  
+    --muted: 210 100% 97%; /* very light blue */
+    --muted-foreground: 215 16% 46%;
+  
+    /* Accent Colors */
+    --accent: 210 100% 92%; /* light blue accent */
+    --accent-foreground: 210 100% 20%;
+    
+    /* Interactive Elements */
+    --interactive: 207 90% 54%;
+    --interactive-hover: 207 90% 44%;
+    --interactive-active: 207 90% 34%;
+
+    /* Alert/Destructive Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 32 95% 44%;
+    --warning-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Form Controls */
+    --border: 210 25% 85%;
+    --input: 210 25% 95%;
+    --input-focus: 210 100% 35%;
+    --ring: 210 100% 35%;
+
+    /* Medical Risk Assessment Colors - Enhanced */
+    --risk-low: 142 76% 36%;
+    --risk-low-bg: 142 76% 95%;
+    --risk-low-border: 142 76% 80%;
+    
+    --risk-moderate: 32 95% 44%;
+    --risk-moderate-bg: 32 95% 95%;
+    --risk-moderate-border: 32 95% 80%;
+    
+    --risk-high: 0 84% 60%;
+    --risk-high-bg: 0 84% 95%;
+    --risk-high-border: 0 84% 80%;
+
+    /* Advanced Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(180 100% 25%) 0%, hsl(180 100% 35%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(207 90% 54%) 0%, hsl(207 90% 64%) 100%);
+    --gradient-background: linear-gradient(135deg, hsl(210 100% 98%) 0%, hsl(210 100% 94%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 25% 98%) 100%);
+    
+    /* Medical Alert Gradients */
+    --gradient-risk-low: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 46%) 100%);
+    --gradient-risk-moderate: linear-gradient(135deg, hsl(32 95% 44%) 0%, hsl(32 95% 54%) 100%);
+    --gradient-risk-high: linear-gradient(135deg, hsl(0 84% 60%) 0%, hsl(0 84% 70%) 100%);
+
+    /* Enhanced Shadow System */
+    --shadow-sm: 0 1px 2px 0 hsl(210 50% 15% / 0.05);
+    --shadow-base: 0 1px 3px 0 hsl(210 50% 15% / 0.1), 0 1px 2px 0 hsl(210 50% 15% / 0.06);
+    --shadow-md: 0 4px 6px -1px hsl(210 50% 15% / 0.1), 0 2px 4px -1px hsl(210 50% 15% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(210 50% 15% / 0.1), 0 4px 6px -2px hsl(210 50% 15% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(210 50% 15% / 0.1), 0 10px 10px -5px hsl(210 50% 15% / 0.04);
+    --shadow-glow: 0 0 0 1px hsl(210 100% 35% / 0.1), 0 4px 16px hsl(210 100% 35% / 0.12);
+
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* (Dark mode remains unchanged) */
+    --background: 215 28% 7%;
+    --background-gradient: linear-gradient(135deg, hsl(215 28% 7%) 0%, hsl(180 25% 10%) 50%, hsl(180 30% 8%) 100%);
+    --foreground: 180 25% 94%;
+    --card: 215 28% 11%;
+    --card-foreground: 180 25% 94%;
+    --card-elevated: 215 28% 13%;
+    --card-shadow: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --primary: 180 100% 35%;
+    --primary-foreground: 215 28% 7%;
+    --primary-light: 180 100% 45%;
+    --primary-glow: 180 100% 25%;
+    --secondary: 207 90% 64%;
+    --secondary-foreground: 215 28% 7%;
+    --secondary-light: 207 90% 74%;
+    --secondary-bg: 207 90% 15%;
+    --muted: 215 28% 15%;
+    --muted-foreground: 180 15% 65%;
+    --accent: 180 50% 20%;
+    --accent-foreground: 180 25% 94%;
+    --interactive: 207 90% 64%;
+    --interactive-hover: 207 90% 74%;
+    --interactive-active: 207 90% 84%;
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 215 28% 7%;
+    --warning: 32 95% 60%;
+    --warning-foreground: 215 28% 7%;
+    --success: 142 76% 50%;
+    --success-foreground: 215 28% 7%;
+    --border: 215 28% 25%;
+    --input: 215 28% 18%;
+    --input-focus: 180 100% 35%;
+    --ring: 180 100% 35%;
+    --risk-low: 142 76% 50%;
+    --risk-low-bg: 142 50% 15%;
+    --risk-low-border: 142 50% 25%;
+    --risk-moderate: 32 95% 60%;
+    --risk-moderate-bg: 32 70% 15%;
+    --risk-moderate-border: 32 70% 25%;
+    --risk-high: 0 84% 70%;
+    --risk-high-bg: 0 60% 15%;
+    --risk-high-border: 0 60% 25%;
+    --gradient-primary: linear-gradient(135deg, hsl(180 100% 35%) 0%, hsl(180 100% 45%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(207 90% 64%) 0%, hsl(207 90% 74%) 100%);
+    --gradient-background: linear-gradient(135deg, hsl(215 28% 7%) 0%, hsl(180 25% 10%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(215 28% 11%) 0%, hsl(215 28% 13%) 100%);
+    --gradient-risk-low: linear-gradient(135deg, hsl(142 76% 50%) 0%, hsl(142 76% 60%) 100%);
+    --gradient-risk-moderate: linear-gradient(135deg, hsl(32 95% 60%) 0%, hsl(32 95% 70%) 100%);
+    --gradient-risk-high: linear-gradient(135deg, hsl(0 84% 70%) 0%, hsl(0 84% 80%) 100%);
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.15);
+    --shadow-base: 0 1px 3px 0 hsl(0 0% 0% / 0.2), 0 1px 2px 0 hsl(0 0% 0% / 0.12);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.2), 0 2px 4px -1px hsl(0 0% 0% / 0.12);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.2), 0 4px 6px -2px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.2), 0 10px 10px -5px hsl(0 0% 0% / 0.08);
+    --shadow-glow: 0 0 0 1px hsl(180 100% 35% / 0.2), 0 4px 16px hsl(180 100% 35% / 0.25);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+@layer components {
+  /* Advanced Clinical Component System */
+  
+  /* Card System */
+  .clinical-card {
+    background: var(--gradient-card);
+    @apply border border-border rounded-2xl shadow-[var(--shadow-base)] p-6 transition-[var(--transition-base)];
+  }
+  
+  .clinical-card:hover {
+    @apply shadow-[var(--shadow-md)] transform -translate-y-0.5;
+  }
+  
+  .clinical-card-elevated {
+    background: var(--gradient-card);
+    @apply border border-border rounded-2xl shadow-[var(--shadow-lg)] p-6 transition-[var(--transition-base)];
+  }
+
+  .clinical-card-interactive {
+    background: var(--gradient-card);
+    @apply border border-border rounded-2xl shadow-[var(--shadow-base)] p-6 cursor-pointer transition-[var(--transition-base)];
+  }
+
+  .clinical-card-interactive:hover {
+    @apply shadow-[var(--shadow-glow)] transform -translate-y-1 scale-[1.02];
+  }
+
+  /* Enhanced Risk Indicators */
+  .risk-indicator {
+    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold transition-[var(--transition-base)] shadow-[var(--shadow-sm)];
+  }
+  
+  .risk-low {
+    background: var(--gradient-risk-low);
+    @apply text-white border border-[hsl(var(--risk-low-border))];
+  }
+  
+  .risk-moderate {
+    background: var(--gradient-risk-moderate);
+    @apply text-white border border-[hsl(var(--risk-moderate-border))];
+  }
+  
+  .risk-high {
+    background: var(--gradient-risk-high);
+    @apply text-white border border-[hsl(var(--risk-high-border))];
+  }
+
+  /* Interactive Elements */
+  .btn-primary {
+    background: var(--gradient-primary);
+    @apply text-white px-6 py-3 rounded-xl font-semibold shadow-[var(--shadow-base)] transition-[var(--transition-base)] border-0;
+  }
+
+  .btn-primary:hover {
+    @apply shadow-[var(--shadow-glow)] transform -translate-y-0.5 scale-[1.02];
+  }
+
+  .btn-secondary {
+    background: var(--gradient-secondary);
+    @apply text-white px-6 py-3 rounded-xl font-semibold shadow-[var(--shadow-base)] transition-[var(--transition-base)] border-0;
+  }
+
+  .btn-secondary:hover {
+    @apply shadow-[var(--shadow-md)] transform -translate-y-0.5;
+  }
+
+  /* Form Controls */
+  .form-input {
+    @apply bg-[hsl(var(--input))] border border-[hsl(var(--border))] rounded-xl px-4 py-3 text-foreground placeholder-[hsl(var(--muted-foreground))] transition-[var(--transition-base)] shadow-[var(--shadow-sm)];
+  }
+
+  .form-input:focus {
+    @apply border-[hsl(var(--input-focus))] ring-2 ring-[hsl(var(--ring)_/_0.2)] shadow-[var(--shadow-glow)] outline-none;
+  }
+
+  /* Background Gradients */
+  .gradient-background {
+    background: var(--gradient-background);
+  }
+  
+  .gradient-primary-bg {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary-bg {
+    background: var(--gradient-secondary);
+  }
+
+  /* Alert System */
+  .alert-success {
+    @apply bg-[hsl(var(--risk-low-bg))] border border-[hsl(var(--risk-low-border))] text-[hsl(var(--success))] rounded-xl p-4;
+  }
+
+  .alert-warning {
+    @apply bg-[hsl(var(--risk-moderate-bg))] border border-[hsl(var(--risk-moderate-border))] text-[hsl(var(--warning))] rounded-xl p-4;
+  }
+
+  .alert-error {
+    @apply bg-[hsl(var(--risk-high-bg))] border border-[hsl(var(--risk-high-border))] text-[hsl(var(--destructive))] rounded-xl p-4;
+  }
+
+  /* Animations */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-fast {
+    transition: var(--transition-fast);
+  }
+
+  /* Mobile-specific */
+  .mobile-header {
+    @apply sticky top-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border;
+  }
+
+  .mobile-tab {
+    @apply flex-1 flex flex-col items-center justify-center p-3 text-xs font-medium transition-[var(--transition-fast)];
+  }
+
+  .mobile-tab.active {
+    @apply text-[hsl(var(--primary))] bg-[hsl(var(--primary-glow)_/_0.1)];
+  }
+}
